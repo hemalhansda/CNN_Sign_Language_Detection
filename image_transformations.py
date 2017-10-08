@@ -11,7 +11,7 @@ datagen = ImageDataGenerator(
         fill_mode='nearest')
 
 #Check the labels in the labels array and modify them accordingly if they are not same.
-labels=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+labels=["A", "B", "C", "D", "E"]
 
 def main():
     for label in labels:
