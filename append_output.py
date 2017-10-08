@@ -1,12 +1,15 @@
 import numpy as np
 
 training_data=[]
+
+#Check the labels in the labels array and modify them accordingly if they are not same. And also change the respective label in Elif conditions below.
 labels=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
 def main():
 
     for label in labels:    
         image_data = np.load("{}-data.npy".format(label))
+        #Change labels in the elif conditions beow if they are not the same.
         for data in image_data:
             if(label == "A"):
                 output = [1,0,0,0,0,0,0,0,0,0]

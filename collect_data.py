@@ -3,6 +3,7 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 
+# Change the label value manually for each Label class
 label = 'A'
 
 def main():
