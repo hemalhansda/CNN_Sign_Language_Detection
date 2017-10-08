@@ -3,6 +3,8 @@ import cv2
 from keras.models import load_model
 cap = cv2.VideoCapture(0)
 
+#Check the labels in the labels array and modify them accordingly if they are not same.
+labels=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 def main():
 
     model = load_model("sign_model.h5")
@@ -16,17 +18,10 @@ def main():
         output = model.predict(image, batch_size=1, verbose=1)
         
         output = (np.argmax(output[0]))
-        
-        if(output==0):
-            print("A")
-        elif(output==1):
-            print("B")
-        elif(output==2):
-            print("C")
-        elif(output==3):
-            print("V")
+        if(output<=len(labels)):
+            print(labels[output])
         else:
-            print("MODEL DOESNT WORK :P")
+            print("Cannot Predict")
 
         if (cv2.waitKey(25) & 0xFF=='q') :
             # np.save("{}-data.npy".format(label), training_data)

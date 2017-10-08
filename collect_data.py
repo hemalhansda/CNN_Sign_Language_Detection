@@ -17,7 +17,7 @@ def main():
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         training_data.append(image)
         count = count+1
-        if (cv2.waitKey(25) & 0xFF=='q') or count == 50 :
+        if (cv2.waitKey(25) & 0xFF=='q') or count == 51 :
             np.save("{}-data.npy".format(label), training_data)
             cv2.destroyAllWindows()
             break

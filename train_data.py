@@ -7,7 +7,7 @@ from random import shuffle
 
 WIDTH = 160
 HEIGHT = 160
-
+#Check the labels in the labels array and modify them accordingly if they are not same.
 labels=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
 def main():
@@ -38,7 +38,7 @@ def main():
     #  let's add a fully-connected layer 
     x = Dense(1024, activation='relu')(x)
     # and a logistic layer -- let's say we have 200 classes
-    predictions = Dense(4, activation='softmax')(x)
+    predictions = Dense(10, activation='softmax')(x)
 
     # this is the model we will train
     model = Model(inputs=base_model.input, outputs=predictions)
