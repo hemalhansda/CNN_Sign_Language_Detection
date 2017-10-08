@@ -27,7 +27,7 @@ def main():
             for x_batch in datagen.flow(x, batch_size=1, shuffle=False):
                 training_data.append([x_batch[0], y])
                 i += 1
-                if i > 15:
+                if i > 20:
                     break
 
         np.save("{}_new_training_data_1.npy".format(label), training_data)
