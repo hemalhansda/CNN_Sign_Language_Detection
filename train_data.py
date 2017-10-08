@@ -38,7 +38,7 @@ def main():
     #  let's add a fully-connected layer 
     x = Dense(1024, activation='relu')(x)
     # and a logistic layer -- let's say we have 200 classes
-    predictions = Dense(10, activation='softmax')(x)
+    predictions = Dense(5, activation='softmax')(x)
 
     # this is the model we will train
     model = Model(inputs=base_model.input, outputs=predictions)
