@@ -27,7 +27,7 @@ def main():
                 break
             training_data.append([data, output])
         
-        np.save("{}-new_data.npy".format(label), training_data)
+        np.save("{}_new_training_data_1.npy".format(label), training_data)
         print("Saved new {} data".format(label))
     print("Output appended for all labels")
 
